@@ -1,0 +1,15 @@
+{
+  "title": "Radio",
+  "name": "allradio",
+  "version": "0.0.1",
+  "description": "radio add-on",
+  "main": "index.js",
+  "author": "Maksim Pavlenko",
+  "engines": {
+    "firefox": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}

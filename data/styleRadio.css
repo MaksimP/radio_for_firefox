@@ -1,0 +1,65 @@
+.control {
+    width: 290px;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+
+}
+
+.buttons{
+    margin-top: 10px;
+    text-align: center;
+}
+
+button{
+    border: none;
+    background-color: white;
+}
+
+.volume {
+    margin: 8px;
+    text-align: center;
+}
+
+input[type=range] {
+    width: 180px;
+}
+
+input[type=range]::-moz-range-track {
+    height: 7px;
+    animate: 0.2s;
+    background-color: gray;
+    border: 1px solid #377480;
+}
+
+input[type=range]::-moz-range-thumb {
+    background-color: black;
+    height: 25px;
+    width: 10px;
+}
+
+.playlist {
+    background-color: white;
+    height: 280px;
+    border-radius: 5px;
+    display: block;
+    overflow-y: scroll;
+}
+
+ul {
+
+}
+
+li {
+    list-style: none;
+    margin-left: -27px;
+    font-size: 15px;
+}
+
+li:hover {
+    background-color: gainsboro;
+}
+
+
+
+

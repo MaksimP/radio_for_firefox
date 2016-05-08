@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <title></title>
+    <script src="player.js"></script>
+    <link rel="stylesheet" type="text/css" href="styleRadio.css">
+
+</head>
+<body>
+    <div class="control">
+        <div class="buttons">
+            <button name="reverseButton" onclick="clickReverse()"><img class="img_reverse" src="image/reverse.png"></button>
+            <button name="playButton" onclick="play()"><img class="img_play" src="image/play.png"></button>
+            <button name="stopButton" onclick="stop()"><img src="image/stop.png"></button>
+            <button name="forwardButton" onclick="clickForward()"><img class="img_forward" src="image/forward.png"></button>
+        </div>
+        <div class="volume">
+            <input class="volume_range" type="range" min="0" max="10" step="1" value="3" onchange="volume()">
+        </div>
+    </div>
+    <div class="info">
+
+    </div>
+    <div class="playlist">
+        <ul id="list" onclick="clickPlaylist(event)" ondblclick="play()">
+            <script>
+                var a = function(){
+                    createPlayList();
+                }();
+            </script>
+        </ul>
+    </div>
+
+
+</body>
+</html>
