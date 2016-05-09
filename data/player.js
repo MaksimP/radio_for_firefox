@@ -49,29 +49,30 @@ function createPlayList() {
     }
 }
 
-function getNumberItem() {
+function getNumberItem(key) {
     var li = document.getElementsByTagName('li');
     for (var i = 0; i < li.length; i++) {
         var liItem = li.item(i);
         if (liItem.style.backgroundColor == COLOR_MARK) {
-            savedItem = i;
+            if (key == 1) {
+                savedItem = i;
+            }
             return i;
         }
     }
 }
 
 function play() {
-    console.log(savedItem);
-    var oldAudio = document.getElementsByTagName('audio').item(savedItem);
-    oldAudio.pause();
-    var audio = document.getElementsByTagName('audio').item(getNumberItem());
+    stop();
+    var audio = document.getElementsByTagName('audio').item(getNumberItem(1));
+    audio.load();
     audio.play();
     volume();
 }
 
 function stop() {
     var playingAudio = document.getElementsByTagName('audio').item(savedItem);
-    playingAudio.stop();
+    playingAudio.pause();
 }
 
 function markItem(key) {
@@ -92,25 +93,8 @@ function markItem(key) {
             li.item(numberItem - 1).style.backgroundColor = 'gray';
         }
     } else {
-        li.item(numberItem).style.backgroundColor = 'white';
+        li.item(getNumberItem()).style.backgroundColor = 'white';
     }
-    //console.log(getNumberItem());
-   /* for (let i = 0; i < li.length; i++) {
-        let liItem = li.item(i);
-        if (liItem.style.backgroundColor == "blue") {
-            if (key == 1) {
-                liItem.style.backgroundColor = "aqua";
-                li.item(i + 1).style.backgroundColor = "blue";
-                break;
-            } else if (key == 2) {
-                liItem.style.backgroundColor = "aqua";
-                li.item(i - 1).style.backgroundColor = "blue";
-                break;
-            } else {
-                liItem.style.backgroundColor = "aqua";
-            }
-        }
-    }*/
 }
 
 function clickForward() {

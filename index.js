@@ -7,7 +7,6 @@ var button = ToggleButton({
   label: "Radio",
   icon: {
     "16" : "./image/radio.png"
-
   },
   onChange: handleChange
 });
