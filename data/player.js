@@ -54,7 +54,7 @@ function createPlayList() {
     for (var i = 1; i < listRadio.length + 1; i++) {
         var el = document.createElement('li');
         if (i == 1) {
-            el.style.backgroundColor = "gray";
+            el.style.backgroundColor = COLOR_MARK;
         }
         el.innerHTML = i + '.  '+ listRadio[i][0] + '<audio><source src ="' + listRadio[i][1] + '"></audio>';
         document.getElementById('list').appendChild(el);
@@ -92,20 +92,20 @@ function markItem(key) {
     var li = document.getElementsByTagName('li');
     if (key == 1) {
         if (numberItem == listRadio.length - 2) {
-            li.item(numberItem).style.backgroundColor = 'gray';
+            li.item(numberItem).style.backgroundColor = COLOR_MARK;
         } else {
-            li.item(numberItem).style.backgroundColor = 'white';
-            li.item(numberItem + 1).style.backgroundColor = 'gray';
+            li.item(numberItem).style.backgroundColor = COLOR_NOT_MARK;
+            li.item(numberItem + 1).style.backgroundColor = COLOR_MARK;
         }
     } else if (key == 2) {
         if (numberItem == 0) {
-            li.item(numberItem).style.backgroundColor = 'gray';
+            li.item(numberItem).style.backgroundColor = COLOR_MARK;
         } else {
-            li.item(numberItem).style.backgroundColor = 'white';
-            li.item(numberItem - 1).style.backgroundColor = 'gray';
+            li.item(numberItem).style.backgroundColor = COLOR_NOT_MARK;
+            li.item(numberItem - 1).style.backgroundColor = COLOR_MARK;
         }
     } else {
-        li.item(getNumberItem()).style.backgroundColor = 'white';
+        li.item(getNumberItem()).style.backgroundColor = COLOR_NOT_MARK;
     }
 }
 
@@ -121,7 +121,7 @@ function clickReverse() {
 
 function clickPlaylist(event) {
     markItem();
-    event.target.style.backgroundColor = "gray";
+    event.target.style.backgroundColor = COLOR_MARK;
     play();
 }
 
